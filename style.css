@@ -1,0 +1,29 @@
+@media (max-width: 1580px) {
+    body {
+      background-color:rgb(251, 251, 251);
+      
+    
+    }
+
+
+}
+
+
+@media (max-width: 1080px) 
+  {
+    body {
+      background-color: rgb(127, 180, 180);
+
+    }
+}
+
+
+@media (max-width: 580px) {
+    body {
+      background-color:lightcyan;
+    
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
