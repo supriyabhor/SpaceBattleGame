@@ -27,3 +27,15 @@
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------*/
+
+.mainGameScreen
+{
+  border: solid black;
+  height: 75vh;
+  margin: 1em;
+  background-image: url(https://images3.alphacoders.com/620/620934.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+
+}
