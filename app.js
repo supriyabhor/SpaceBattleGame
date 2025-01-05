@@ -72,4 +72,25 @@ class HumanShip extends Ship {
     }
     this.updateStatus();
 },
-  }  
+
+ // Alien's attack
+ alienAttack: function(alien) {
+    if (alien.hull > 0) { // Only attack if the alien ship is still alive
+        const alienHit = alien.attack(this.playerShip);
+        if (alienHit) {
+            logBattle(`The alien hit you! Your hull: ${this.playerShip.hull}`);
+        } else {
+            logBattle("The alien missed!");
+        }
+
+        if (this.playerShip.hull <= 0) {
+            logBattle("You have been destroyed! Game Over.");
+            this.gameOver = true;
+            document.getElementById('attackButton').disabled = true;
+            
+        }
+    }
+
+},
+
+}
