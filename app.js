@@ -93,4 +93,20 @@ class HumanShip extends Ship {
 
 },
 
+ // Check if the game is won or lost
+ checkWin: function() {
+    if (this.alienShips[this.currentAlienIndex].hull <= 0) {
+        this.currentAlienIndex++;
+        if (this.currentAlienIndex < this.alienShips.length) {
+            logBattle("Prepare for the next alien!");
+        } else {
+            logBattle("You have destroyed all alien ships! You win!");
+            this.gameOver = true;
+            document.getElementById('attackButton').disabled = true;
+           
+        }
+    }
+},
+
+
 }
