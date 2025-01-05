@@ -16,3 +16,20 @@ class Ship {
 }
 }
 
+// Human Ship (Subclass of Ship)
+class HumanShip extends Ship {
+    constructor() {
+        super(20, 5, 0.7); // USS Assembly
+    }
+  
+  }
+
+  //Alian Ship (subclass of ship)
+  class AlienShip extends Ship {
+    constructor() {
+        const hull = Math.floor(Math.random() * 4) + 3; // Hull between 3 and 6
+        const firepower = Math.floor(Math.random() * 3) + 2; // Firepower between 2 and 4
+        const accuracy = (Math.floor(Math.random() * 3) + 6) / 10; // Accuracy between 0.6 and 0.8
+        super(hull, firepower, accuracy);
+    }
+  }
