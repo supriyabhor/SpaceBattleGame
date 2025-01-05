@@ -120,8 +120,17 @@ updateStatus: function() {
         document.getElementById('alienHull').textContent = `Hull: ${alien.hull}`;
         document.getElementById('alienFirepower').textContent = `Firepower: ${alien.firepower}`;
         document.getElementById('alienAccuracy').textContent = `Accuracy: ${alien.accuracy}`;
+      
     }
 }
 };
 
 
+//log the battle
+
+function logBattle(message)
+{
+    const log=document.getElementById('log');
+    log.textContent += message + '\n';
+    log.scrollTop = log.scrollHeight;
+}
