@@ -32,4 +32,14 @@ class HumanShip extends Ship {
         const accuracy = (Math.floor(Math.random() * 3) + 6) / 10; // Accuracy between 0.6 and 0.8
         super(hull, firepower, accuracy);
     }
+
+    //alian attack
+    attack(target) {
+        if(Math.random() < this.accuracy) {
+            target.hull -= this.firepower;
+            return true; // Alien hit
+
+             }
+         return false; // Alien miss
+    }
   }
