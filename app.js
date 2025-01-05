@@ -15,3 +15,4 @@ class Ship {
     return false; // Miss the attack
 }
 }
+
