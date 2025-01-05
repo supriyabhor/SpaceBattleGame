@@ -51,6 +51,15 @@ class HumanShip extends Ship {
     currentAlienIndex: 0,
     gameOver: false,
 
+// Initialize Alien Ships
+initAlienShips: function() 
+{
+    for (let i = 0; i < 6; i++) {
+        this.alienShips.push(new AlienShip());
+    }
+    this.updateStatus();
+},
+
     // Attack an alien ship
   attack: function() {
     if (this.gameOver) return;
@@ -134,3 +143,6 @@ function logBattle(message)
     log.textContent += message + '\n';
     log.scrollTop = log.scrollHeight;
 }
+
+// Initialize the game and alien ships
+game.initAlienShips();
