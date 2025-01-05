@@ -50,5 +50,26 @@ class HumanShip extends Ship {
     alienShips: [],
     currentAlienIndex: 0,
     gameOver: false,
-    
+
+    // Attack an alien ship
+  attack: function() {
+    if (this.gameOver) return;
+
+    const alien = this.alienShips[this.currentAlienIndex];
+    const playerHit = this.playerShip.attack(alien);
+
+    if (playerHit) {
+        logBattle(`You hit the alien! Alien hull: ${alien.hull}`);
+    } else {
+        logBattle("You missed the alien!");
+    }
+
+    if (alien.hull <= 0) {
+        logBattle("You destroyed the alien ship!");
+        this.checkWin();
+    } else {
+        this.alienAttack(alien);
+    }
+    this.updateStatus();
+},
   }  
