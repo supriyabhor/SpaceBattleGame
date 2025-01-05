@@ -109,4 +109,19 @@ class HumanShip extends Ship {
 },
 
 
+// Update the status display
+updateStatus: function() {
+    document.getElementById('yourHull').textContent = `Hull: ${this.playerShip.hull}`;
+    document.getElementById('yourFirepower').textContent = `Firepower: ${this.playerShip.firepower}`;
+    document.getElementById('yourAccuracy').textContent = `Accuracy: ${this.playerShip.accuracy}`;
+
+    if (this.currentAlienIndex < this.alienShips.length) {
+        const alien = this.alienShips[this.currentAlienIndex];
+        document.getElementById('alienHull').textContent = `Hull: ${alien.hull}`;
+        document.getElementById('alienFirepower').textContent = `Firepower: ${alien.firepower}`;
+        document.getElementById('alienAccuracy').textContent = `Accuracy: ${alien.accuracy}`;
+    }
 }
+};
+
+
