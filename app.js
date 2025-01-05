@@ -43,3 +43,12 @@ class HumanShip extends Ship {
          return false; // Alien miss
     }
   }
+
+  //Game Object
+  const game = {
+    playerShip: new HumanShip(),
+    alienShips: [],
+    currentAlienIndex: 0,
+    gameOver: false,
+    
+  }  
